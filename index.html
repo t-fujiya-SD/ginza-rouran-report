@@ -65,15 +65,15 @@
   <a onclick="goto('s-trend')">日別 売上・客数</a>
   <a onclick="goto('s-ld')">ランチ / ディナー</a>
   <div class="dh">詳細</div>
-  <a onclick="goto('s-drink')">ドリンク詳細</a>
   <a onclick="goto('s-web')">WEB詳細（媒体PV）</a>
   <a onclick="goto('s-sns')">SNS詳細（Instagram）</a>
-  <a onclick="goto('s-pl')">PL明細（収益）</a>
-  <a onclick="goto('s-promo')">販促 費用対効果</a>
   <a onclick="goto('s-resv')">予約リスト（招待日和・ダイナース）</a>
   <a onclick="goto('s-review')">口コミスコア</a>
+  <a onclick="goto('s-promo')">販促 費用対効果</a>
+  <a onclick="goto('s-pl')">PL明細（収益）</a>
   <a onclick="goto('s-menu')">メニューABC（上位）</a>
   <a onclick="goto('s-abc')">商品ABC（全商品・検索）</a>
+  <a onclick="goto('s-drink')">ドリンク詳細</a>
 </nav>
 
 <header>
@@ -93,7 +93,8 @@
     <div class="seclabel">③ SNS</div>
     <div class="kpis"><div class="kpi"><div class="label">SNS想定売上</div><div class="val">¥208,110</div><div class="sub">参考・推計</div></div><div class="kpi"><div class="label">総閲覧数</div><div class="val">10,406</div></div><div class="kpi"><div class="label">SNS予約件数</div><div class="val">7件</div></div><div class="kpi"><div class="label">いいね数</div><div class="val">217</div></div><div class="kpi"><div class="label">保存数</div><div class="val">39</div></div><div class="kpi"><div class="label">シェア数</div><div class="val">3</div></div></div>
     <div class="seclabel">④ その他売上</div>
-    <div class="kpis"><div class="kpi"><div class="label">その他売上 合計</div><div class="val">¥371,280</div></div><div class="kpi"><div class="label">招待日和</div><div class="val">¥254,120</div><div class="sub">9組 / 20名（Gmail集計）</div></div><div class="kpi"><div class="label">ダイナース</div><div class="val">¥117,160</div><div class="sub">5組 / 10名（1名無料）</div></div><div class="kpi"><div class="label">その他（手入力）</div><div class="val">¥0</div><div class="sub">テイクアウト・物販等</div></div></div>
+    <div class="kpis"><div class="kpi"><div class="label">その他売上 合計</div><div class="val">¥1,237,170</div></div><div class="kpi"><div class="label">招待日和＋ダイナース</div><div class="val">¥371,280</div><div class="sub">14組 / 30名（Gmail集計 / 1名無料）</div></div><div class="kpi"><div class="label">掛売上</div><div class="val">¥824,290</div><div class="sub">法人掛売 4件 ▼内訳</div></div><div class="kpi"><div class="label">旅助</div><div class="val">¥41,600</div><div class="sub">送客チャネル（収支の売掛）</div></div><div class="kpi"><div class="label">その他（手入力）</div><div class="val">¥0</div><div class="sub">テイクアウト・物販等</div></div></div>
+    <details style="margin:8px 0 0"><summary style="cursor:pointer;font-size:13px;color:var(--navy);font-weight:700">▼ 掛売上の内訳（4件・計 ¥824,290）</summary><table style="margin-top:8px"><thead><tr><th>掛売先</th><th>金額</th></tr></thead><tbody><tr><td>法人A</td><td>¥489,410</td></tr><tr><td>法人B</td><td>¥172,480</td></tr><tr><td>法人C</td><td>¥101,310</td></tr><tr><td>法人D</td><td>¥61,090</td></tr></tbody></table></details>
     <div class="seclabel">⑤ 収益</div>
     <div class="kpis"><div class="kpi"><div class="label">原価率</div><div class="val">34.4%</div><div class="sub">売上原価 ¥3,595,594</div></div><div class="kpi"><div class="label">人件費額</div><div class="val">¥4,814,162</div><div class="sub">対売上 46.0%</div></div><div class="kpi"><div class="label">営業利益</div><div class="val neg">¥-3,225,283</div><div class="sub">利益率 -30.8%</div></div></div>
   </section>
@@ -156,16 +157,34 @@
 
   <section id="s-sns" class="hidden">
     <h2>SNS詳細（Instagram）</h2>
+    <p style="font-size:12px;color:#889;margin:0 0 8px">（ ）内の▲▼は前月（4月）比</p>
     <div class="kpis">
-      <div class="kpi"><div class="label">リーチ</div><div class="val">3,122</div></div>
-      <div class="kpi"><div class="label">総閲覧数</div><div class="val">10,406</div></div>
-      <div class="kpi"><div class="label">いいね</div><div class="val">217</div></div>
-      <div class="kpi"><div class="label">保存</div><div class="val">39</div></div>
-      <div class="kpi"><div class="label">シェア</div><div class="val">3</div></div>
-      <div class="kpi"><div class="label">予約</div><div class="val">7件</div></div>
-      <div class="kpi"><div class="label">想定売上</div><div class="val">¥208,110</div></div>
+      <div class="kpi"><div class="label">フォロワー数</div><div class="val">684</div><div class="sub"><span style="color:#99a">前月データなし</span></div></div>
+      <div class="kpi"><div class="label">総閲覧数</div><div class="val">10,406</div><div class="sub"><span style="color:#889">前月 47,143</span> <b style="color:var(--red)">▼77.9%</b></div></div>
+      <div class="kpi"><div class="label">リーチ</div><div class="val">3,122</div><div class="sub"><span style="color:#889">前月 23,401</span> <b style="color:var(--red)">▼86.7%</b></div></div>
+      <div class="kpi"><div class="label">いいね</div><div class="val">217</div><div class="sub"><span style="color:#889">前月 601</span> <b style="color:var(--red)">▼63.9%</b></div></div>
+      <div class="kpi"><div class="label">保存</div><div class="val">39</div><div class="sub"><span style="color:#889">前月 367</span> <b style="color:var(--red)">▼89.4%</b></div></div>
+      <div class="kpi"><div class="label">シェア</div><div class="val">3</div><div class="sub"><span style="color:#889">前月 11</span> <b style="color:var(--red)">▼72.7%</b></div></div>
+      <div class="kpi"><div class="label">プロフィールアクセス</div><div class="val">407</div><div class="sub"><span style="color:#889">前月 937</span> <b style="color:var(--red)">▼56.6%</b></div></div>
+      <div class="kpi"><div class="label">外部リンクタップ</div><div class="val">27</div><div class="sub"><span style="color:#889">前月 102</span> <b style="color:var(--red)">▼73.5%</b></div></div>
+      <div class="kpi"><div class="label">予約件数</div><div class="val">7件</div><div class="sub"><span style="color:#889">前月 13</span> <b style="color:var(--red)">▼46.2%</b></div></div>
+      <div class="kpi"><div class="label">想定売上</div><div class="val">¥208,110</div><div class="sub"><span style="color:#889">前月 ¥386,490</span> <b style="color:var(--red)">▼46.2%</b></div></div>
     </div>
     <canvas id="funnel" height="120"></canvas>
+
+    <h2 style="margin-top:22px">フォロワー属性</h2>
+    <div class="grid2">
+      <div>
+        <p style="font-weight:700;margin:0 0 8px">年齢構成</p>
+        <div style="display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px"><span style="width:64px;color:#566">13-17</span><span style="flex:1;background:#e9edf1;border-radius:3px;height:16px;position:relative"><span style="position:absolute;left:0;top:0;height:16px;width:0%;background:var(--navy);border-radius:3px"></span></span><span style="width:46px;text-align:right;color:#445">0%</span></div><div style="display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px"><span style="width:64px;color:#566">18-24</span><span style="flex:1;background:#e9edf1;border-radius:3px;height:16px;position:relative"><span style="position:absolute;left:0;top:0;height:16px;width:3%;background:var(--navy);border-radius:3px"></span></span><span style="width:46px;text-align:right;color:#445">0.8%</span></div><div style="display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px"><span style="width:64px;color:#566">25-34</span><span style="flex:1;background:#e9edf1;border-radius:3px;height:16px;position:relative"><span style="position:absolute;left:0;top:0;height:16px;width:29%;background:var(--navy);border-radius:3px"></span></span><span style="width:46px;text-align:right;color:#445">9.1%</span></div><div style="display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px"><span style="width:64px;color:#566">35-44</span><span style="flex:1;background:#e9edf1;border-radius:3px;height:16px;position:relative"><span style="position:absolute;left:0;top:0;height:16px;width:37%;background:var(--navy);border-radius:3px"></span></span><span style="width:46px;text-align:right;color:#445">11.4%</span></div><div style="display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px"><span style="width:64px;color:#566">45-54</span><span style="flex:1;background:#e9edf1;border-radius:3px;height:16px;position:relative"><span style="position:absolute;left:0;top:0;height:16px;width:85%;background:var(--navy);border-radius:3px"></span></span><span style="width:46px;text-align:right;color:#445">26.3%</span></div><div style="display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px"><span style="width:64px;color:#566">55-64</span><span style="flex:1;background:#e9edf1;border-radius:3px;height:16px;position:relative"><span style="position:absolute;left:0;top:0;height:16px;width:100%;background:var(--navy);border-radius:3px"></span></span><span style="width:46px;text-align:right;color:#445">30.9%</span></div><div style="display:flex;align-items:center;gap:8px;margin:3px 0;font-size:12px"><span style="width:64px;color:#566">65+</span><span style="flex:1;background:#e9edf1;border-radius:3px;height:16px;position:relative"><span style="position:absolute;left:0;top:0;height:16px;width:70%;background:var(--navy);border-radius:3px"></span></span><span style="width:46px;text-align:right;color:#445">21.5%</span></div>
+        <p style="margin:12px 0 0;font-size:13px"><b>性別</b>：男性 57% ／ 女性 43%</p>
+      </div>
+      <div>
+        <p style="font-weight:700;margin:0 0 8px">トップの地域</p>
+        <table><thead><tr><th>地域</th><th>割合</th></tr></thead><tbody><tr><td>港区</td><td>5.7%</td></tr><tr><td>横浜市</td><td>4.8%</td></tr><tr><td>東京都世田谷区</td><td>4.4%</td></tr><tr><td>中央区</td><td>4.2%</td></tr><tr><td>川崎市</td><td>3.2%</td></tr></tbody></table>
+      </div>
+    </div>
+    <p style="color:#99a;font-size:12px;margin-top:10px">※ 属性はInstagramインサイトのスクショから自動抽出。前月対比（フォロワー増減等）は業績まとめExcel「SNS」シートに翌月以降表示。フォロワー数は手入力。</p>
   </section>
 
   <section id="s-pl" class="hidden">
@@ -311,8 +330,8 @@ new Chart(document.getElementById('access'),{type:'line',
 });
 
 new Chart(document.getElementById('funnel'),{type:'bar',
-  data:{labels:['リーチ','閲覧','いいね','保存','予約'],datasets:[{label:'件数',
-    data:[3122,10406,217,39,7],
+  data:{labels:['閲覧','リーチ','いいね','保存','予約'],datasets:[{label:'件数',
+    data:[10406,3122,217,39,7],
     backgroundColor:[navy,'#4a78a8','#7a9cbf',gold,'#a8593a']}]},
   options:{plugins:{legend:{display:false},datalabels:{display:true,anchor:'end',align:'top',formatter:v=>v.toLocaleString()}},
     scales:{y:{type:'logarithmic'}}}
