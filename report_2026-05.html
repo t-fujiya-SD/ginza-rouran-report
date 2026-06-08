@@ -28,6 +28,9 @@
   .kpi .val { font-size:clamp(17px,4.6vw,24px); font-weight:700; margin-top:5px; color:var(--navy); white-space:nowrap; letter-spacing:-.02em; }
   .kpi .val.neg { color:var(--red); }
   .kpi .sub { font-size:11px; color:#889; margin-top:3px; }
+  .kpi-click { cursor:pointer; transition:box-shadow .15s; }
+  .kpi-click:hover { box-shadow:0 3px 12px rgba(28,58,94,.22); }
+  .bd-panel { margin:4px 0 10px; background:var(--card); border-radius:10px; padding:6px 14px 12px; box-shadow:0 1px 4px rgba(0,0,0,.08); border-top:3px solid var(--gold); }
   section { background:var(--card); border-radius:10px; padding:20px; margin:16px 0; box-shadow:0 1px 4px rgba(0,0,0,.06); scroll-margin-top:80px; }
   section h2 { font-size:17px; margin:0 0 14px; padding-left:11px; border-left:5px solid var(--navy); }
   .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
@@ -89,12 +92,13 @@
     <div class="seclabel">① 店舗実績</div>
     <div class="kpis"><div class="kpi"><div class="label">売上高</div><div class="val">¥10,465,269</div><div class="sub">営業日数 31日</div></div><div class="kpi"><div class="label">総客数</div><div class="val">880人</div></div><div class="kpi"><div class="label">客単価</div><div class="val">¥11,892</div></div><div class="kpi"><div class="label">一人あたりドリンク売上</div><div class="val">¥1,816</div></div><div class="kpi"><div class="label">一人あたりドリンク杯数</div><div class="val">1.1 杯</div><div class="sub">計 968杯</div></div></div>
     <div class="seclabel">② WEB</div>
-    <div class="kpis"><div class="kpi"><div class="label">WEB売上</div><div class="val">¥1,511,357</div><div class="sub">実額＋想定（媒体別）</div></div><div class="kpi"><div class="label">WEB総PV数</div><div class="val">23,748</div><div class="sub">食べログ 13,438 / ぐるなび 485 / オズモール 4,835 / 一休 4,990</div></div><div class="kpi"><div class="label">WEB予約件数</div><div class="val">74件</div><div class="sub">来店実績 219組</div></div></div>
+    <div class="kpis"><div class="kpi kpi-click" onclick="togglePanel('web-bd')"><div class="label">WEB売上</div><div class="val">¥1,511,357</div><div class="sub">実額＋想定（媒体別） <span style="color:var(--gold)">▼内訳</span></div></div><div class="kpi"><div class="label">WEB総PV数</div><div class="val">23,748</div><div class="sub">食べログ 13,438 / ぐるなび 485 / オズモール 4,835 / 一休 4,990</div></div><div class="kpi"><div class="label">WEB予約件数</div><div class="val">74件</div><div class="sub">来店実績 219組</div></div></div>
+    <div id="web-bd" class="hidden bd-panel"><table><thead><tr><th>媒体</th><th>区分</th><th>PV</th><th>予約</th><th>売上</th></tr></thead><tbody><tr><td>食べログ</td><td>想定</td><td>13,438</td><td>22</td><td>¥859,197</td></tr><tr><td>ぐるなび</td><td>想定</td><td>485</td><td>0</td><td>¥0</td></tr><tr><td>オズモール</td><td>実額</td><td>4,835</td><td>4</td><td>¥65,744</td></tr><tr><td>一休</td><td>実額</td><td>4,990</td><td>25</td><td>¥586,416</td></tr></tbody></table></div>
     <div class="seclabel">③ SNS</div>
     <div class="kpis"><div class="kpi"><div class="label">SNS想定売上</div><div class="val">¥208,110</div><div class="sub">参考・推計</div></div><div class="kpi"><div class="label">総閲覧数</div><div class="val">10,406</div></div><div class="kpi"><div class="label">SNS予約件数</div><div class="val">7件</div></div><div class="kpi"><div class="label">いいね数</div><div class="val">217</div></div><div class="kpi"><div class="label">保存数</div><div class="val">39</div></div><div class="kpi"><div class="label">シェア数</div><div class="val">3</div></div></div>
     <div class="seclabel">④ その他売上</div>
-    <div class="kpis"><div class="kpi"><div class="label">その他売上 合計</div><div class="val">¥1,237,170</div></div><div class="kpi"><div class="label">招待日和＋ダイナース</div><div class="val">¥371,280</div><div class="sub">14組 / 30名（Gmail集計 / 1名無料）</div></div><div class="kpi"><div class="label">掛売上</div><div class="val">¥824,290</div><div class="sub">法人掛売 4件 ▼内訳</div></div><div class="kpi"><div class="label">旅助</div><div class="val">¥41,600</div><div class="sub">送客チャネル（収支の売掛）</div></div><div class="kpi"><div class="label">その他（手入力）</div><div class="val">¥0</div><div class="sub">テイクアウト・物販等</div></div></div>
-    <details style="margin:8px 0 0"><summary style="cursor:pointer;font-size:13px;color:var(--navy);font-weight:700">▼ 掛売上の内訳（4件・計 ¥824,290）</summary><table style="margin-top:8px"><thead><tr><th>掛売先</th><th>金額</th></tr></thead><tbody><tr><td>法人A</td><td>¥489,410</td></tr><tr><td>法人B</td><td>¥172,480</td></tr><tr><td>法人C</td><td>¥101,310</td></tr><tr><td>法人D</td><td>¥61,090</td></tr></tbody></table></details>
+    <div class="kpis"><div class="kpi"><div class="label">その他売上 合計</div><div class="val">¥1,237,170</div></div><div class="kpi"><div class="label">招待日和＋ダイナース</div><div class="val">¥371,280</div><div class="sub">14組 / 30名（Gmail集計 / 1名無料）</div></div><div class="kpi kpi-click" onclick="togglePanel('kake-bd')"><div class="label">掛売上</div><div class="val">¥824,290</div><div class="sub">法人掛売 4件 <span style="color:var(--gold)">▼内訳</span></div></div><div class="kpi"><div class="label">旅助</div><div class="val">¥41,600</div><div class="sub">送客チャネル（収支の売掛）</div></div><div class="kpi"><div class="label">その他（手入力）</div><div class="val">¥0</div><div class="sub">テイクアウト・物販等</div></div></div>
+    <div id="kake-bd" class="hidden bd-panel"><table><thead><tr><th>掛売先</th><th>金額</th></tr></thead><tbody><tr><td>法人A</td><td>¥489,410</td></tr><tr><td>法人B</td><td>¥172,480</td></tr><tr><td>法人C</td><td>¥101,310</td></tr><tr><td>法人D</td><td>¥61,090</td></tr></tbody></table></div>
     <div class="seclabel">⑤ 収益</div>
     <div class="kpis"><div class="kpi"><div class="label">原価率</div><div class="val">34.4%</div><div class="sub">売上原価 ¥3,595,594</div></div><div class="kpi"><div class="label">人件費額</div><div class="val">¥4,814,162</div><div class="sub">対売上 46.0%</div></div><div class="kpi"><div class="label">営業利益</div><div class="val neg">¥-3,225,283</div><div class="sub">利益率 -30.8%</div></div></div>
   </section>
@@ -287,6 +291,7 @@
 function openDrawer(){document.getElementById('drawer').classList.add('open');document.getElementById('scrim').classList.add('open');}
 function closeDrawer(){document.getElementById('drawer').classList.remove('open');document.getElementById('scrim').classList.remove('open');}
 function goto(id){var el=document.getElementById(id);if(el){el.classList.remove('hidden');el.scrollIntoView({behavior:'smooth'});}closeDrawer();}
+function togglePanel(id){var e=document.getElementById(id);if(e)e.classList.toggle('hidden');}
 function filterAbc(){
   var q=(document.getElementById('abc-q').value||'').toLowerCase();
   var cat=document.getElementById('abc-cat').value, rk=document.getElementById('abc-rank').value;
