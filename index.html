@@ -340,8 +340,8 @@ new Chart(document.getElementById('funnel'),{type:'bar',
   data:{labels:['閲覧','リーチ','いいね','保存','予約'],datasets:[{label:'件数',
     data:[10406,3122,217,39,7],
     backgroundColor:[navy,'#4a78a8','#7a9cbf',gold,'#a8593a']}]},
-  options:{plugins:{legend:{display:false},datalabels:{display:true,anchor:'end',align:'top',formatter:v=>v.toLocaleString()}},
-    scales:{y:{type:'logarithmic'}}}
+  options:{layout:{padding:{top:22}},plugins:{legend:{display:false},datalabels:{display:true,anchor:'end',align:'top',clamp:true,clip:false,formatter:v=>v.toLocaleString()}},
+    scales:{y:{type:'logarithmic',grace:'15%'}}}
 });
 filterAbc();
 </script>
