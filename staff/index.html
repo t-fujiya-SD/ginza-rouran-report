@@ -73,7 +73,7 @@
   <a onclick="goto('s-resv')">予約リスト（招待日和・ダイナース）</a>
   <a onclick="goto('s-review')">口コミスコア</a>
   <a onclick="goto('s-promo')">販促 費用対効果</a>
-  <a onclick="goto('s-pl')">PL明細（収益）</a>
+  
   <a onclick="goto('s-menu')">メニューABC（上位）</a>
   <a onclick="goto('s-abc')">商品ABC（全商品・検索）</a>
   <a onclick="goto('s-drink')">ドリンク詳細</a>
@@ -83,7 +83,7 @@
   <button class="burger" onclick="openDrawer()">&#9776;</button>
   <h1>銀座楼蘭　月次業績レポート</h1>
   <div class="sub">2026年05月
-    <a href="input.html" style="margin-left:12px;background:var(--gold);color:#fff;text-decoration:none;padding:6px 12px;border-radius:7px;font-weight:700;font-size:13px;white-space:nowrap">✏ 数値入力</a>
+    
   </div>
 </header>
 
@@ -102,7 +102,7 @@
     <div class="kpis"><div class="kpi"><div class="label">その他売上 合計</div><div class="val">¥1,237,170</div></div><div class="kpi"><div class="label">招待日和＋ダイナース</div><div class="val">¥371,280</div><div class="sub">14組 / 30名（Gmail集計 / 1名無料）</div></div><div class="kpi kpi-click" onclick="togglePanel('kake-bd')"><div class="label">掛売上</div><div class="val">¥824,290</div><div class="sub">法人掛売 4件 <span style="color:var(--gold)">▼内訳</span></div></div><div class="kpi"><div class="label">旅助</div><div class="val">¥41,600</div><div class="sub">送客チャネル（収支の売掛）</div></div><div class="kpi"><div class="label">その他（手入力）</div><div class="val">¥0</div><div class="sub">テイクアウト・物販等</div></div></div>
     <div id="kake-bd" class="hidden bd-panel"><table><thead><tr><th>掛売先</th><th>金額</th></tr></thead><tbody><tr><td>法人A</td><td>¥489,410</td></tr><tr><td>法人B</td><td>¥172,480</td></tr><tr><td>法人C</td><td>¥101,310</td></tr><tr><td>法人D</td><td>¥61,090</td></tr></tbody></table></div>
     <div class="seclabel">⑤ 収益</div>
-    <div class="kpis"><div class="kpi"><div class="label">原価率</div><div class="val">34.4%</div><div class="sub">売上原価 ¥3,595,594</div></div><div class="kpi"><div class="label">人件費額</div><div class="val">¥4,814,162</div><div class="sub">対売上 46.0%</div></div><div class="kpi"><div class="label">営業利益</div><div class="val neg">¥-3,225,283</div><div class="sub">利益率 -30.8%</div></div></div>
+    <div class="kpis"><div class="kpi"><div class="label">原価率</div><div class="val">34.4%</div><div class="sub">売上原価 ¥3,595,594</div></div><div class="kpi"><div class="label">人件費額</div><div class="val">¥4,814,162</div><div class="sub">対売上 46.0%</div></div></div>
   </section>
 
   <section id="s-trend">
@@ -194,11 +194,6 @@
   </section>
 
   
-  <section id="s-pl" class="hidden">
-    <h2>PL明細（収支一覧→勘定科目マッピング）</h2>
-    <p style="font-size:13px;color:#667;margin:0 0 12px">売上はPOS実績、費用は収支一覧の支出を科目分類。営業利益＝売上−（原価＋販管費）。営業外費用(利息)・除外(積金等BS)は営業利益の対象外。</p>
-    <table><thead><tr><th>科目</th><th>金額</th><th>対売上</th></tr></thead><tbody><tr style='font-weight:700;background:#eef2f6'><td>売上高(POS)</td><td>¥10,465,269</td><td>100.0%</td></tr><tr><td>原価</td><td>¥3,595,594</td><td>34.4%</td></tr><tr><td>人件費</td><td>¥4,814,162</td><td>46.0%</td></tr><tr><td>家賃</td><td>¥2,546,225</td><td>24.3%</td></tr><tr><td>エネルギー</td><td>¥937,670</td><td>9.0%</td></tr><tr><td>販促費用</td><td>¥377,897</td><td>3.6%</td></tr><tr><td>店舗インフラ</td><td>¥599,840</td><td>5.7%</td></tr><tr><td>店舗消耗品</td><td>¥260,604</td><td>2.5%</td></tr><tr><td>顧問フィー</td><td>¥540,580</td><td>5.2%</td></tr><tr><td>振込手数料</td><td>¥17,980</td><td>0.2%</td></tr><tr><td>除外（営業利益の対象外）</td><td>¥740,417</td><td>—</td></tr><tr style='font-weight:700;background:#f4f6f8'><td>営業利益</td><td class='neg'>¥-3,225,283</td><td>-30.8%</td></tr></tbody></table>
-  </section>
 
   <section id="s-promo" class="hidden">
     <h2>販促 費用対効果（ROI）</h2>
@@ -255,7 +250,7 @@
 
   <div class="note">
     売上・客数・客単価・ドリンク・ABCはPOSレジCSV、WEB媒体はCSV/スクショ(Vision)、SNSはInstagramスクショ＋予約台帳、
-    招待日和・ダイナースはメール/PDF、PL（原価率・人件費・営業利益）は収支一覧xlsx＋勘定科目マッピングから自動集計。
+    招待日和・ダイナースはメール/PDF、PL（原価率・人件費）は収支一覧xlsx＋勘定科目マッピングから自動集計。
     口コミ・その他売上のみ手入力。
   </div>
 </div>
